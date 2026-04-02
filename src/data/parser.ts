@@ -60,4 +60,15 @@ export function parseData(): Condominio[] {
   });
 }
 
-export const condominios = parseData();
+const parsedCondominios = parseData();
+
+// Adicionando o Metrocasa Freguesia do Ó manualmente conforme solicitado
+parsedCondominios.push({
+  codigo: '555',
+  nome: 'METROCASA FREGUESIA DO Ó',
+  gerente: 'Sem Gerente',
+  nucleo: 'Sem Núcleo',
+  responsavel: 'NATHAN'
+});
+
+export const condominios = parsedCondominios;
